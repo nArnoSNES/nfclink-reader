@@ -20,6 +20,7 @@ def get():
     return ':'.join(re.findall('.{2}',r[11:19].encode("hex")))
 
 def init():
+    # Todo: read response to check if OK
     send("20 00 01 01") # CORE_RESET
     send("20 01 00") # CORE_INIT
     send("22 00 01 01") # NFCEE_DISCOVER
